@@ -2218,6 +2218,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75de40b6047ae47e49fef62320cec04b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turretRotation: {fileID: 1157299740}
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 64
+  targetingRange: 5
+  rotationSpeed: 400
 --- !u!4 &245200763 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3939232764060833785, guid: 742bcf7eff550476db2da997528992dd, type: 3}
