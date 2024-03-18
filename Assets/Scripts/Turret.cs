@@ -10,6 +10,10 @@ public class Turret : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private float targetingRange = 5f;
 
+    private void Awake() {
+        Debug.Log("Anan yanimda.");
+    }
+
     private void OnDrawGizmosSelected() {
         Debug.Log("Gizmo Selected");
     }
