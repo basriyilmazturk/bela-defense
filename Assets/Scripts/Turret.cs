@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("References")]
+    [SerializeField] private Transform turretRotation;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    [Header("Attributes")]
+    [SerializeField] private float targetingRange = 5f;
+
+    private void OnDrawGizmosSelected() {
+        Debug.Log("Gizmo Selected");
     }
 }
