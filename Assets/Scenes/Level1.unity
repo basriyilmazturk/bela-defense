@@ -16347,6 +16347,7 @@ GameObject:
   - component: {fileID: 1383217895}
   - component: {fileID: 1383217894}
   - component: {fileID: 1383217896}
+  - component: {fileID: 1383217897}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -16417,10 +16418,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 5637704650343005821, guid: a449527f7aba042f3a0919848fb0b348, type: 3}
-  baseEnemies: 8
-  enemiesPerSecond: 0.5
+  baseEnemies: 20
+  enemiesPerSecond: 2
   timeBetweenWaves: 1
-  difficultyScalingFactor: 0.5
+  difficultyScalingFactor: 1
+--- !u!114 &1383217897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383217893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f664f902d566a49beaa61029fc1bd197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefabs:
+  - {fileID: 6541547290165309523, guid: 0399823280f504d67a06a487d303f114, type: 3}
 --- !u!4 &1391869062 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3939232764060833785, guid: 742bcf7eff550476db2da997528992dd, type: 3}
@@ -22911,6 +22926,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 381591894}
     m_Modifications:
+    - target: {fileID: -2359333661682557710, guid: 742bcf7eff550476db2da997528992dd, type: 3}
+      propertyPath: howerColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 164930121967948935, guid: 742bcf7eff550476db2da997528992dd, type: 3}
       propertyPath: m_Name
       value: Plot (79)

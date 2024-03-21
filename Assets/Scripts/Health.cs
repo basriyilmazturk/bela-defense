@@ -10,7 +10,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage) {
         hitPoints -= damage;
 
-        if(hitPoints <= 0) {
+        if(hitPoints == 0) {
             EnemySpawner.onEnemyDestroy.Invoke();
             Destroy(gameObject);
         }
