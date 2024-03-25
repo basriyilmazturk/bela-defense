@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
-{
+public class Health : MonoBehaviour {
     [Header("Attributes")]
     [SerializeField] private int hitPoints = 2; //
     [SerializeField] private int currencyWorth = 50;
@@ -11,10 +10,10 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage) {
         hitPoints -= damage;
 
-        if(hitPoints == 0) {
+        if (hitPoints == 0) {
             EnemySpawner.onEnemyDestroy.Invoke();
             LevelManager.main.IncreaseCurrency(currencyWorth);
             Destroy(gameObject);
         }
-    } 
+    }
 }

@@ -21,8 +21,8 @@ public class Turret : MonoBehaviour {
     private float timeUntilFire;
 
     private void Update() {
-        if (target == null) {
-            findTarget();
+        if (!target) {
+            FindTarget();
             return;
         }
 
@@ -55,7 +55,7 @@ public class Turret : MonoBehaviour {
         bulletScript.SetTarget(target);
     }
 
-    private void findTarget() {
+    private void FindTarget() {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(
             transform.position,
             targetingRange,
@@ -70,10 +70,12 @@ public class Turret : MonoBehaviour {
     }
 
     private void RotateTowardsTarget() {
-        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg;
+        var angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) *
+                    Mathf.Rad2Deg;
 
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-        turretRotation.rotation = Quaternion.RotateTowards(turretRotation.rotation, targetRotation, rotationSpeed * Time.deltaTime);// targetRotation;
+        turretRotation.rotation =
+            Quaternion.RotateTowards(turretRotation.rotation, targetRotation,
+                rotationSpeed * Time.deltaTime); // targetRotation;
     }
-
 }

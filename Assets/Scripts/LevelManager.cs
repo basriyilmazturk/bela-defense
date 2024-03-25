@@ -7,7 +7,6 @@ public class LevelManager : MonoBehaviour {
 
     public Transform startPoint;
     public Transform[] path;
-
     public int currency;
 
     [Header("Attributes")]
@@ -31,7 +30,7 @@ public class LevelManager : MonoBehaviour {
             Debug.Log("buy");
             return true;
         }
-        
+
         Debug.Log("not enough money");
         return false;
     }

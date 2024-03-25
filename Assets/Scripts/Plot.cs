@@ -7,6 +7,7 @@ public class Plot : MonoBehaviour {
     [Header("References")]
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Color howerColor;
+
     private GameObject tower;
     private Color startColor;
 
@@ -28,7 +29,7 @@ public class Plot : MonoBehaviour {
             return;
         }
 
-        Tower towerToBuild = BuildManager.main.GetSelectedTower();
+        Tower towerToBuild = BuildManager.Main.GetSelectedTower();
         if (towerToBuild.cost > LevelManager.main.currency) {
             Debug.Log("not enough currency");
             return;

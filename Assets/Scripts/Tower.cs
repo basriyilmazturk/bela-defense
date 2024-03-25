@@ -12,6 +12,4 @@ public class Tower {
         cost = _cost;
         prefab = _prefab;
     }
-
-    
 }
